@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.thanks_section {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.thanks_container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    gap: 20px;
+    padding: 0 30px 20px 30px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+    position: absolute;
+    z-index: 2;
+
+    width: 95%;
+    height: 60vh;
+}
+
+.thanks_title,
+.thanks_caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 100px;
+    /*170px*/
+    text-transform: uppercase;
+    background-image: -webkit-linear-gradient(45deg, #047cfb, #09c4dd, #685cfa, #fb1653);
+    /* Para navegadores WebKit (Safari, Chrome). */
+    background-image: -moz-linear-gradient(45deg, #047cfb, #09c4dd, #685cfa, #fb1653);
+    /* Para navegadores Gecko (Firefox). */
+    background-image: -o-linear-gradient(45deg, #047cfb, #09c4dd, #685cfa, #fb1653);
+    /* Para navegadores Opera. */
+    background-image: linear-gradient(45deg, #047cfb, #09c4dd, #685cfa, #fb1653);
+    /* background-image: linear-gradient(45deg, #002782, #00517C, #00919C, #1ED4AF); */
+    /* Padrão. */
+    -webkit-background-clip: text;
+    /* Para navegadores WebKit (Safari, Chrome). */
+    -moz-background-clip: text;
+    /* Para navegadores Gecko (Firefox). */
+    -o-background-clip: text;
+    /* Para navegadores Opera. */
+    background-clip: text;
+    /* Padrão. */
+    -webkit-text-fill-color: transparent;
+    outline: none;
+    background-size: 400% 100%;
+    animation: gradient 5s linear infinite alternate;
+}
+
+.thanks_caption {
+    font-size: 40px;
+    /*50px*/
+}
+
+@keyframes gradient {
+    0% {
+        background-position-x: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.thanks_btn {
+    position: relative;
+    margin: 20px 0 30px 0;
+    padding: 12px 55px;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.thanks_btn::after,
+.thanks_btn::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transition: all 1s ease-in;
+}
+
+.thanks_btn::after {
+    top: 1px;
+    left: 1px;
+    border-top: 3px solid #047cfb;
+    border-left: 3px solid #685cfa;
+}
+
+.thanks_btn::before {
+    bottom: 1px;
+    right: 1px;
+    border-bottom: 3px solid #047cfb;
+    border-right: 3px solid #685cfa;
+}
+
+.thanks_btn:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.thanks_btn:hover::before,
+.thanks_btn:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.thanks_btn_link {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--text-color);
+    position: relative;
+    z-index: 2;
+}

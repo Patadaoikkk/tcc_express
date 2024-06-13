@@ -1,0 +1,330 @@
+.expert_hanking_cards_container {
+  /* border: 1px solid red; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1700px;
+}
+
+.expert_hanking_image {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin-top: -100px;
+}
+
+.expert_hanking_info_container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 530px;
+  text-align: left;
+  transition: box-shadow 0.6s ease-in;
+}
+
+.expert_hanking_info_container:hover {
+  box-shadow: 0 5px 10px var(--border-color);
+}
+
+/* Posição dos cards. */
+.expert_hanking_center {
+  order: 2;
+}
+
+.expert_hanking_right {
+  order: 3;
+  transform: scale(0.9);
+}
+
+.expert_hanking_left {
+  order: 1;
+  transform: scale(0.9);
+}
+
+.expert_hanking_info,
+.expert_hanking_name {
+  margin: 10px 0;
+}
+
+.expert_hanking_info,
+.expert_hanking_spec_rcp {
+  margin: 10px 0;
+}
+
+.expert_hanking_info,
+.expert_hanking_paragraph {
+  margin: 13px 0;
+}
+
+.expert_hanking_approach {
+  font-weight: 500;
+}
+
+.expert_hanking_ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0 0 0;
+}
+
+.expert_hanking_li {
+  background: rgba(104, 92, 250, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(104, 92, 250, 0.1);
+  border-radius: 10px;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.expert_hanking_name {
+  /* border: 1px solid green; */
+  font-family: var(--font);
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+
+.expert_hanking_spec_rcp {
+  /* border: 1px solid green; */
+  margin: 10px 0 30px 0;
+  font-family: var(--font);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2px 0;
+}
+
+.expert_hanking_spec {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 3px 0;
+}
+
+.expert_hanking_rcp {
+  font-size: 17px;
+  font-weight: 600;
+  color: #685cfa;
+}
+
+.expert_hanking_button_container {
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.expert_hanking_button,
+.expert_hanking_primary_button {
+  position: relative;
+  margin: 20px 0 10px 0;
+  padding: 10px 25px;
+  background: transparent;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.expert_hanking_primary_button::after,
+.expert_hanking_primary_button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 1s ease-in;
+}
+
+.expert_hanking_primary_button::after {
+  top: 0;
+  left: 0;
+  border-top: 3px solid #047cfb;
+  border-left: 3px solid #685cfa;
+}
+
+.expert_hanking_primary_button::before {
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid #047cfb;
+  border-right: 3px solid #685cfa;
+}
+
+.expert_hanking_primary_button:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.expert_hanking_primary_button:hover::before,
+.expert_hanking_primary_button:hover::after {
+  width: 10px;
+  height: 10px;
+}
+
+.expert_hanking_button::after,
+.expert_hanking_button::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transition: all 1s ease-in;
+}
+
+.expert_hanking_button::after {
+  top: 1px;
+  left: 1px;
+  border-top: 3px solid #047cfb;
+  border-left: 3px solid #685cfa;
+}
+
+.expert_hanking_button::before {
+  bottom: 1px;
+  right: 1px;
+  border-bottom: 3px solid #047cfb;
+  border-right: 3px solid #685cfa;
+}
+
+.expert_hanking_button:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.expert_hanking_button:hover::before,
+.expert_hanking_button:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.expert_hanking_link {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--text-color);
+  position: relative;
+  z-index: 2;
+}
+
+.expert_hanking_star {
+  font-size: 23px;
+  color: #ffcc00;
+  margin-right: 5px;
+}
+
+/* Responsividades. */
+/* Estilos específicos para resolução de 320x568. */
+@media screen and (max-width: 320px) and (min-height: 568px) {
+  .expert_hanking_cards_container {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    width: 108%;
+    max-width: 310px;
+    gap: 80px;
+  }
+
+  .expert_hanking_info_container {
+    width: 100%;
+  }
+
+  /* Posição dos cards. */
+  .expert_hanking_center {
+    order: 1;
+  }
+
+  .expert_hanking_right {
+    order: 3;
+  }
+
+  .expert_hanking_left {
+    order: 2;
+  }
+
+  .expert_hanking_span {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  .expert_hanking_name {
+    border: 1px solid green;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .expert_hanking_button_container {
+    border: 1px solid green;
+    flex-direction: column;
+  }
+
+  .expert_hanking_button,
+  .expert_hanking_primary_button {
+    font-size: 15px;
+  }
+}
+
+/* Estilos específicos para resolução de 375x667. */
+@media screen and (min-width: 375px) and (min-height: 667px) {
+  .button {
+    font-size: 15px;
+  }
+}
+
+/* Estilos específicos para resolução de 1024x768. */
+@media screen and (min-width: 1024px) and (min-height: 768px) {
+  .button {
+    font-size: 20px;
+  }
+}
+
+/* Estilos específicos para resolução de 1440x900. */
+@media screen and (min-width: 1440px) and (min-height: 900px) {
+  .button {
+    font-size: 20px;
+  }
+}
+
+/* Estilos específicos para resolução de 1680x1050. */
+@media screen and (min-width: 1680px) and (min-height: 1050px) {
+  .button {
+    font-size: 20px;
+  }
+}
+
+/* Estilos específicos para resolução de 1920x1080. */
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .button {
+    font-size: 20px;
+  }
+}
+
+/* Estilos específicos para resolução de 2560x1440. */
+@media screen and (min-width: 2560px) and (min-height: 1440px) {
+  .button {
+    font-size: 20px;
+  }
+}
+
+/* @media (min-width: 768px) {
+  .expert_hanking_container {
+    display: flex;
+    justify-content: space-around;
+  }
+} */

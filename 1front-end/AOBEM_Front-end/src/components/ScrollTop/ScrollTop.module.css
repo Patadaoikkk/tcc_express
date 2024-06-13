@@ -1,0 +1,39 @@
+.progress {
+    position: fixed;
+    width: 60px;
+    /*70px*/
+    height: 60px;
+    /*70px*/
+    right: 10px;
+    bottom: 20px;
+    box-shadow: var(--icon-shadow);
+    border-radius: 50%;
+    display: none;
+    place-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.progress_value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    /*40px*/
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.up {
+    transform: rotate(0deg);
+}
+
+.down {
+    transform: rotate(180deg);
+}

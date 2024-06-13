@@ -1,0 +1,191 @@
+.importance_container {
+    /* border: 1px solid yellow; */
+    border-radius: 0.6rem;
+}
+
+.importance_img img {
+    display: block;
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.importance_cards {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    /* grid-gap: 2rem; */
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.importance_card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 0.6rem;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: 0.2s;
+}
+
+.importance_card_content {
+    position: absolute;
+    background-color: rgba(0, 9, 10, 0.9);
+    bottom: 0;
+    color: #F7F6FB;
+    width: 100%;
+    height: 25%;
+    padding: 2.2rem 0;
+    overflow: hidden;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.importance_card_content .importance_cards_title {
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.importance_card_content .importance_cards_paragraph {
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: left;
+    padding: 50px;
+}
+
+.importance_card_content:hover {
+    height: 70%;
+    transition: 0.7s;
+}
+
+.importance_container_btn {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.importance_prev_btn {
+    margin-left: -70px;
+    margin-top: -400px;
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    line-height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+
+    color: var(--icon-color);
+    box-shadow: var(--icon-shadow);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.importance_next_btn {
+    margin-right: -70px;
+    margin-top: -400px;
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    line-height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+
+    color: var(--icon-color);
+    box-shadow: var(--icon-shadow);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.importance_next_btn:hover,
+.importance_prev_btn:hover {
+    color: #fb1653;
+    box-shadow: 0px 2px 10px rgba(251, 22, 83, 1);
+}
+
+/* Responsividade. */
+/* @media (max-width: 1081px) {
+    .importance_cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .importance_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .importance_cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */
+
+@media screen and (max-width: 320px) and (min-height: 568px) {
+    .importance_img img {
+        /* OK. */
+        height: 20rem;
+        object-fit: contain;
+    }
+
+    .importance_cards {
+        /* OK. */
+        /* background-color: #F7F6FB; */
+        background-color: transparent;
+        /* grid-template-columns: repeat(3, 1fr); */
+        height: 390px;
+    }
+
+    .importance_card_content {
+        /* OK. */
+        height: 35%;
+        padding: 4.2rem 0;
+    }
+
+    .importance_card_content .importance_cards_title {
+        /* OK. */
+        font-size: 20px;
+    }
+
+    .importance_card_content .importance_cards_paragraph {
+        /* OK. */
+        font-size: 15px;
+    }
+
+    .importance_card_content:hover {
+        /* OK. */
+        height: 100%;
+    }
+
+    .importance_container_btn {
+        /* OK. */
+        /* background-color: red; */
+        /* border: 1px solid yellow; */
+        background-color: rgba(0, 9, 10, 0.9);
+        border-radius: 0.6rem;
+    }
+
+    .importance_prev_btn {
+        /* OK. */
+        margin: 20px 0 15px 60px;
+        font-size: 35px;
+    }
+
+    .importance_next_btn {
+        /* OK. */
+        margin-top: 20px;
+        margin-right: 60px;
+        margin-bottom: 15px;
+        font-size: 35px;
+    }
+}

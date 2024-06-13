@@ -1,0 +1,760 @@
+* {
+    box-sizing: border-box;
+}
+
+.signUp_patient_expert_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    min-height: 100%;
+    margin: 10%;
+    border-radius: 20px;
+}
+
+.signUp_patient_expert_container {
+    position: relative;
+    width: 868px;
+    /*768px*/
+    max-width: 100%;
+    min-height: 780px;
+    /*380px*/
+    /*580*/
+    background: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.signUp_expert,
+.signUp_patient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: all 0.6s ease-in;
+}
+
+.signUp_expert {
+    width: 50%;
+    opacity: 1;
+    /*0*/
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.signUp_patient {
+    width: 50%;
+    z-index: 2;
+}
+
+.signUp_patient_expert_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: transparent;
+    padding: 0 30px;
+    /*50px*/
+    height: 100%;
+    text-align: center;
+}
+
+.signUp_patient_expert_title {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.signUp_patient_expert_paragraph {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 20px;
+}
+
+.signUp_patient_expert_paragraph_over {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    margin: 15px 0 20px;
+    text-align: justify;
+}
+
+.signUp_patient_expert_container_input {
+    position: relative;
+    width: 100%;
+}
+
+.signUp_patient_expert_input {
+    background: #dedde1;
+    padding: 12px 40px 12px 15px;
+    margin: 8px 15px;
+    width: calc(100% - 55px);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    /*14px*/
+}
+
+.signUp_patient_expert_ico2 {
+    position: absolute;
+    transform: translateY(90%);
+    right: 40px;
+    color: #6d6d6d;
+    font-size: 20px;
+}
+
+.signUp_patient_expert_ico {
+    position: absolute;
+    transform: translateY(90%);
+    right: 40px;
+    color: #6d6d6d;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.88ms ease-in;
+}
+
+.signUp_patient_expert_ico:active {
+    color: #0c0c0c;
+}
+
+.signUp_patient_expert_a {
+    color: #0c0c0c;
+    font-size: 1em;
+    /*14px*/
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.signUp_patient_expert_account {
+    color: #6EA8FF;
+    font-size: 1em;
+    /*14px*/
+    font-weight: bold;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.signUp_patient_expert_account:hover {
+    color: #fb1653;
+}
+
+.signUp_patient_expert_terms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    cursor: pointer;
+}
+
+/* Estilo do select */
+.signUp_patient_expert_select {
+    background: #dedde1;
+    color: #6d6d6d;
+    padding: 12px 40px 12px 15px;
+    margin: 8px 15px;
+    width: calc(100% - 55px);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+.signUp_patient_expert_select_icon {
+    position: absolute;
+    transform: translateY(90%);
+    right: 40px;
+    color: #6d6d6d;
+    font-size: 20px;
+}
+
+/* Fim. */
+
+.signUp_patient_expert_checkbox {
+    cursor: pointer;
+}
+
+/* .signUp_expert_btn {
+    color: #F7F6FB;
+    background-color: transparent;
+    border: 2px solid #F7F6FB;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 12px 55px;
+    border-radius: 10px;
+    outline: none;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 88ms ease-in;
+}
+
+.signUp_expert_btn:hover {
+    transform: scale(0.90);
+} */
+
+.signUp_expert_btn {
+    position: relative;
+    white-space: nowrap;
+    margin: 30px 0 10px 0;
+    padding: 12px 55px;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.signUp_expert_btn::after,
+.signUp_expert_btn::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transition: all 1s ease-in;
+}
+
+.signUp_expert_btn::after {
+    top: 1px;
+    left: 1px;
+    /* border-top: 3px solid #FFFFFF;
+    border-left: 3px solid #F7F6FB; */
+    border-top: 3px solid var(--border-color);
+    border-left: 3px solid var(--border-color);
+}
+
+.signUp_expert_btn::before {
+    bottom: 1px;
+    right: 1px;
+    /* border-bottom: 3px solid #FFFFFF;
+    border-right: 3px solid #F7F6FB; */
+    border-bottom: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+}
+
+.signUp_expert_btn:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.signUp_expert_btn:hover::before,
+.signUp_expert_btn:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.signUp_expert_btn_us_link {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--text-color);
+    position: relative;
+    z-index: 2;
+}
+
+/*.signUp_patient_expert_btn {
+    color: var(--text-color-light);
+    background: #6EA8FF;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 12px 55px;
+    border-radius: 10px;
+    border: 1px solid #6EA8FF;
+    outline: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 88ms ease-in;
+} 
+
+.signUp_patient_expert_btn:active {
+    transform: scale(0.90);
+}*/
+
+.signUp_patient_expert_btn {
+    position: relative;
+    margin: 30px 0 10px 0;
+    padding: 12px 55px;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.signUp_patient_expert_btn::after,
+.signUp_patient_expert_btn::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transition: all 1s ease-in;
+}
+
+.signUp_patient_expert_btn::after {
+    top: 1px;
+    left: 1px;
+    border-top: 3px solid #047cfb;
+    border-left: 3px solid #685cfa;
+}
+
+.signUp_patient_expert_btn::before {
+    bottom: 1px;
+    right: 1px;
+    border-bottom: 3px solid #047cfb;
+    border-right: 3px solid #685cfa;
+}
+
+.signUp_patient_expert_btn:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.signUp_patient_expert_btn:hover::before,
+.signUp_patient_expert_btn:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.signUp_patient_expert_btn_us_link {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--text-color);
+    position: relative;
+    z-index: 2;
+}
+
+.container .right_panel_active .signUp_patient {
+    transform: translateX(100%);
+}
+
+.container .right_panel_active,
+.signUp_expert {
+    /*.container .right_panel_active .sign_up*/
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+.overlay_container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 99;
+}
+
+.container .right_panel_active .overlay_container {
+    /*.container .right_panel_active .overlay_container*/
+    transform: translateX(-100%);
+}
+
+.overlay {
+    position: relative;
+    color: var(--text-color);
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(to right, #09c4dd, #685cfa);
+    transform: translateX(0);
+    transition: transform 0.06s ease-in-out;
+}
+
+.container,
+.right_panel_active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay_left,
+.overlay_right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.06s ease-in-out;
+}
+
+.overlay_left {
+    transform: translateX(-20%);
+}
+
+.overlay_right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container,
+.right_panel_active .overlay_left {
+    transform: translateX(0);
+}
+
+.container,
+.right_panel_active .overlay_right {
+    transform: translateX(20%);
+}
+
+.signUp_patient_expert_social_container {
+    margin: 20px 0;
+}
+
+.signUp_patient_expert_social_container .signUp_patient_expert_a {
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F7F6FB;
+    border-radius: 50%;
+}
+
+.signUp_patient_expert_social {
+    color: var(--icon-color);
+    box-shadow: var(--icon-shadow);
+    font-size: 30px;
+    line-height: 50px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.signUp_patient_expert_social:hover {
+    /* color: #685cfa;
+    box-shadow: 0px 2px 10px rgba(104, 92, 250, 1); */
+    /* color: #09c4dd;
+    box-shadow: 0px 2px 10px rgba(9, 196, 221, 1); */
+    /* color: #047cfb;
+    box-shadow: 0px 2px 10px rgba(4, 124, 251, 1); */
+    color: #6EA8FF;
+    box-shadow: 0px 2px 10px rgba(110, 168, 255, 1);
+}
+
+.overlay_container.is_signUp_expert {
+    transform: translateX(100%);
+}
+
+.overlay_container.is_signUp_expert.is_signUp_expert_visible {
+    transform: translateX(-100%);
+}
+
+/* Icones dos avisos. */
+.content {
+    display: none;
+    border: 3px solid #6EA8FF;
+    border-radius: 5px;
+    width: calc(100% - 55px);
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: left;
+    align-items: center;
+}
+
+.instructions .content {
+    display: block;
+    text-align: left;
+    padding: 5px 10px;
+    justify-content: space-around;
+}
+
+.signUp_patient_expert_icoo {
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 25px;
+    padding: 3px;
+    color: #FFDD02;
+    background-color: #0c0c0c;
+    border: 2px solid #FFDD02;
+    border-radius: 100%;
+}
+
+/* Responsividades. */
+@media (max-width: 1081px) {
+
+    .signUp_patient_expert_body {
+        padding: 5% 0;
+    }
+
+    .signUp_patient_expert_container {
+        width: 468px;
+        /*868px;*/
+        min-height: 1580px;
+    }
+
+    .signUp_expert,
+    .signUp_patient {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .signUp_expert {
+        top: 0;
+        z-index: 1;
+    }
+
+    .signUp_patient {
+        top: 50%;
+        z-index: 2;
+    }
+
+    .container .right_panel_active .signUp_patient {
+        transform: none;
+    }
+
+    .container .right_panel_active,
+    .signUp_expert {
+        transform: none;
+    }
+
+    .overlay_container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        z-index: 99;
+        transition: transform 0.9s ease-in-out;
+    }
+
+    .overlay_container.is_signUp_expert {
+        transform: translateY(100%);
+    }
+
+    .overlay_container:not(.is_signUp_expert) {
+        transform: translateY(0%);
+    }
+
+    .overlay_container.is_signUp_expert.is_signUp_expert_visible {
+        transform: translateY(100%);
+    }
+
+    .overlay {
+        transform: translateY(0);
+    }
+
+    .overlay_left,
+    .overlay_right {
+        position: absolute;
+        top: 0%;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
+    }
+
+    .overlay_left {
+        left: 0;
+        top: -5%;
+    }
+
+    .overlay_right {
+        right: 0;
+        top: 50%;
+    }
+
+    .container .right_panel_active .overlay_left {
+        transform: translateY(100%);
+    }
+
+    .container .right_panel_active .overlay_right {
+        transform: translateY(100%);
+    }
+}
+
+@media (min-width: 412px) and (max-width: 430px) {
+
+    .signUp_patient_expert_body {
+        padding: 20% 0;
+    }
+
+    .signUp_patient_expert_container {
+        width: 400px;
+        min-height: 1650px;
+    }
+
+    .signUp_patient_expert_container_input {
+        left: -4%;
+    }
+
+    .signUp_patient_expert_input {
+        width: calc(100% - 1px);
+    }
+
+    .signUp_patient_expert_ico2,
+    .signUp_patient_expert_ico {
+        transform: translateY(-190%);
+        right: -3px;
+    }
+
+    .signUp_expert_btn {
+        padding: 12px 30px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 375px) {
+    .signUp_patient_expert_body {
+        padding: 25% 0;
+    }
+
+    .signUp_patient_expert_container {
+        width: 363px;
+        min-height: 1850px;
+    }
+
+    .signUp_patient_expert_container_input {
+        left: -5%;
+    }
+
+    .signUp_patient_expert_input {
+        width: calc(100% - 1px);
+    }
+
+    .signUp_patient_expert_ico2,
+    .signUp_patient_expert_ico {
+        transform: translateY(-190%);
+        right: -3px;
+    }
+
+    .signUp_expert_btn {
+        padding: 12px 30px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 360px) {
+    .signUp_patient_expert_body {
+        padding: 25% 0;
+    }
+
+    .signUp_patient_expert_container {
+        width: 348px;
+        min-height: 1950px;
+    }
+
+    .signUp_patient_expert_container_input {
+        left: -7%;
+    }
+
+    .signUp_patient_expert_input {
+        width: calc(100% - 1px);
+    }
+
+    .signUp_patient_expert_ico2,
+    .signUp_patient_expert_ico {
+        transform: translateY(-190%);
+        right: -3px;
+    }
+
+    .signUp_expert_btn {
+        padding: 12px 30px;
+        white-space: wrap;
+    }
+}
+
+@media (max-width: 320px) {
+    .signUp_patient_expert_body {
+        padding: 30% 0;
+    }
+
+    .signUp_patient_expert_container {
+        width: 308px;
+        min-height: 2000px;
+    }
+
+    .signUp_patient_expert_container_input {
+        left: -7%;
+    }
+
+    .signUp_patient_expert_input {
+        width: calc(100% - 1px);
+    }
+
+    .signUp_patient_expert_ico2,
+    .signUp_patient_expert_ico {
+        transform: translateY(-190%);
+        right: -3px;
+    }
+
+    .signUp_expert_btn {
+        padding: 12px 30px;
+        white-space: wrap;
+    }
+}
+
+@media (max-width: 280px) {
+
+    .signUp_patient_expert_body {
+        padding: 40% 0;
+    }
+
+    .signUp_patient_expert_container {
+        width: 268px;
+        min-height: 2050px;
+    }
+
+    .signUp_patient_expert_container_input {
+        left: -7%;
+    }
+
+    .signUp_patient_expert_input {
+        width: calc(100% - 1px);
+    }
+
+    .signUp_patient_expert_ico2,
+    .signUp_patient_expert_ico {
+        transform: translateY(-190%);
+        right: -3px;
+    }
+
+    .signUp_expert_btn {
+        padding: 12px 30px;
+        white-space: wrap;
+    }
+}

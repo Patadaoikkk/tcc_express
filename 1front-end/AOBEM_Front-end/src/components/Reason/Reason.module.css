@@ -1,0 +1,131 @@
+.reason_container {
+    /* border: 1px solid blue; */
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reason_title {
+    /* border: 1px solid orange; */
+    color: #685cfa;
+    font-size: 30px;
+    /*25px*/
+    letter-spacing: 3px;
+    font-family: var(--font);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.reason_text {
+    /* border: 1px solid green; */
+    width: 95%;
+    padding-right: 20px;
+    grid-column: 1;
+    font-family: var(--font);
+    font-size: 20px;
+    text-align: left;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.reason_list {
+    border: 1px solid #dedde1;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 18px;
+    margin-right: -20px;
+}
+
+.reason_item {
+    border-bottom: 1px solid #dedde1;
+}
+
+.reason_question {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-family: var(--font);
+    transition: all 0.5s ease-in-out;
+}
+
+.reason_question .reason_caption {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.reason_toggle_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    margin-left: 5px;
+}
+
+.reason_icon {
+    font-size: 25px;
+    line-height: 50px;
+    display: flex;
+    flex-direction: row;
+    color: var(--icon-color);
+    box-shadow: var(--icon-shadow);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.reason_icon:hover {
+    color: #fb1653;
+    box-shadow: 0px 2px 10px rgba(251, 22, 83, 1);
+}
+
+.reason_active {
+    transform: rotate(45deg);
+}
+
+.reason_answer {
+    padding: 15px;
+    background: rgba(104, 92, 250, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(104, 92, 250, 0.1);
+    border-radius: 10px;
+    font-size: 20px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.reason_answer.show {
+    max-height: 500px;
+}
+
+
+/* Responsividades. */
+/* Estilos específicos para resolução de 320x568. */
+@media screen and (max-width: 320px) and (max-height: 568px) {
+
+    /* Reason. */
+    .reason_title {
+        color: #685cfa;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .reason_text {
+        width: 90%;
+        padding-right: none;
+        font-size: 15px;
+    }
+
+    .reason_list {
+        /* OK .*/
+        font-size: 15px;
+    }
+
+    .reason_answer {
+        /*OK.*/
+        font-size: 15px;
+    }
+}

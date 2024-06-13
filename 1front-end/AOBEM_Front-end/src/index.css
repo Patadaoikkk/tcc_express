@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-family: 'Lobster', sans-serif;
+
+  /* line-height: 1.5;
+  font-weight: 400; */
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --font: Inter;
+  --fonte: Lobster;
+
+  --primary: #047cfb #6EA8FF;
+  /*dark #000c19 or #0b1019*/
+  --secondary: #09c4dd #8CE8FF;
+  /*dark #001316 or #0e1719*/
+  --tertiary: #685cfa #B4A0FF;
+  /*dark #0a0919 or #121019*/
+  --quaternary: #fb1653 #FF8CC6;
+  /*dark #190208 or #190e13*/
+  --quinary: #0c0c0c;
+
+  --senary: #9c9ca4;
+  --septenary: #F7F6FB;
+
+  --octonary: #0c0c0c;
+
+  --background-color-light: #F7F6FB;
+  --text-color-light: #0c0c0c;
+  --icon-color-light: #0c0c0c;
+  /* --icon-shadow-light: 0px 2px 10px rgba(0, 0, 0, 0.5); */
+  --footer-background-light: #99c2ff;
+  --footer-text-color-light: #0c0c0c;
+
+  --border-color-light: #0c0c0c;
+
+  --logotipo: url(light_logotipo.png);
+
+
+  --background-color-dark: #000c19;
+  --text-color-dark: #F7F6FB;
+  --icon-color-dark: #F7F6FB;
+  /* --icon-shadow-dark: 0px 2px 10px rgba(255, 255, 255, 0.5); */
+  --footer-background-dark: #0b1019;
+  --footer-text-color-dark: #F7F6FB;
+
+  --border-color-dark: #F7F6FB;
+
+  --logotipo: url(dark_logotipo.png);
+
+
+  /* --other-text-color-light: #0c0c0c;
+  --other-text-color-dark: #F7F6FB; */
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  /* Variáveis CSS para as propriedades que mudam. */
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  color: var(--icon-color-light);
+  box-shadow: var(--icon-shadow-light);
+}
+
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+  color: var(--icon-color-dark);
+  box-shadow: var(--icon-shadow-dark);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos para navegadores WebKit (Chrome, Safari). */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Largura da barra de rolagem. */
+}
+
+::-webkit-scrollbar-track {
+  background: #c5dcff;
+  /* Cor da trilha. */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6EA8FF;
+  /* Cor da alça. */
+  border-radius: 6px;
+  /* Borda da alça. */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #047cfb;
+}

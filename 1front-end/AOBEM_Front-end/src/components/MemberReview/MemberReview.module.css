@@ -1,0 +1,131 @@
+.member_review_container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.member_review_card {
+    flex: 0 0 calc(33.33% - 20px);
+    /* border: 0.16px dotted var(--border-color); */
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    position: relative;
+    transition: box-shadow 0.6s ease-in;
+}
+
+.member_review_card:hover {
+    box-shadow: 0 5px 10px var(--border-color);
+}
+
+.member_review_card::before {
+    content: "❝❞";
+    font-size: 56px;
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    color: #685cfa;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    /* border: 0.16px dotted var(--border-color); */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -10px;
+    transition: box-shadow 0.6s ease-in, color 0.6s ease-in;
+}
+
+.member_review_card:hover::before {
+    box-shadow: 0 5px 10px var(--border-color);
+    color: #fb1653;
+}
+
+.member_review_user_image .member_review_image {
+    width: 145px;
+    height: 145px;
+    /* border: 0.16px dotted var(--border-color); */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    margin: 5px;
+}
+
+.member_review_user_image {
+    display: flex;
+    align-items: flex-start;
+}
+
+.member_review_user_info {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.member_review_name {
+    width: 95%;
+    font-family: var(--font);
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px;
+    padding: 5px 0;
+}
+
+.member_review_text {
+    text-align: left;
+    font-size: 18px;
+}
+
+.member_review_star {
+    font-size: 23px;
+    color: #ffcc00;
+    margin-right: 5px;
+    padding-bottom: 5px;
+}
+
+.member_review_span {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+/* Responsividades. */
+/* Estilos específicos para resolução de 320x568. */
+@media screen and (max-width: 320px) and (min-height: 568px) {
+    .member_review_container {
+        max-width: 1300px;
+        gap: 50px;
+    }
+
+    .member_review_card {
+        flex: 0 0 auto;
+        width: 300px;
+        padding: 25px 60px;
+    }
+
+    .member_review_name {
+        font-size: 20px;
+    }
+
+    .member_review_text {
+        font-size: 15px;
+        margin: 0 -50px;
+    }
+
+    .member_review_star {
+        font-size: 23px;
+        color: #ffcc00;
+    }
+
+    .member_review_span {
+        margin: 0 -50px;
+        font-size: 15px;
+    }
+}

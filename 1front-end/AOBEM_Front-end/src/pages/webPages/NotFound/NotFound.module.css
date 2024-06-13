@@ -1,0 +1,529 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.notFound_section {
+    /* border: 1px solid green; */
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    /*80vh*/
+}
+
+/* .notFound_shape, .notFound_shape1, .notFound_shape2 {
+    border: 1px solid #ff00a6;
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    background-color: #ff00a6;
+    top: 100px;
+    left: 30px;
+    width: 150px;
+    height: 150px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: -3;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+/* .notFound_shape1 {
+    border: 1px solid #fbb657;
+    border-radius: 30% 70% 20% 40%;
+    background-color: #fbb657;
+
+    top: 300px;
+    left: 0;
+    right: 30px;
+} */
+
+/* .notFound_shape2 {
+    border: 1px solid #71aafa;
+    border-radius: 60% 40% 60% 40%;
+    background-color: #71aafa;
+
+    top: 250px;
+    left: 0;
+    right: -1380px;
+} */
+
+.notFound_container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    gap: 20px;
+    padding: 0 30px 20px 30px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+    position: absolute;
+    z-index: 2;
+
+    width: 95%;
+    height: 60vh;
+}
+
+.notFound_title,
+.notFound_caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 170px;
+    /*200px*/
+    background-image: -webkit-linear-gradient(45deg, #047cfb, #09c4dd, #685cfa, #fb1653);
+    /* Para navegadores WebKit (Safari, Chrome). */
+    background-image: -moz-linear-gradient(45deg, #047cfb, #09c4dd, #685cfa, #fb1653);
+    /* Para navegadores Gecko (Firefox). */
+    background-image: -o-linear-gradient(45deg, #047cfb, #09c4dd, #685cfa, #fb1653);
+    /* Para navegadores Opera. */
+    background-image: linear-gradient(45deg, #047cfb, #09c4dd, #685cfa, #fb1653);
+    /* Padrão. */
+    -webkit-background-clip: text;
+    /* Para navegadores WebKit (Safari, Chrome). */
+    -moz-background-clip: text;
+    /* Para navegadores Gecko (Firefox). */
+    -o-background-clip: text;
+    /* Para navegadores Opera. */
+    background-clip: text;
+    /* Padrão. */
+    -webkit-text-fill-color: transparent;
+    outline: none;
+    background-size: 400% 100%;
+    animation: gradient 5s linear infinite alternate;
+}
+
+.notFound_caption {
+    font-size: 40px;
+    /*50px*/
+}
+
+@keyframes gradient {
+    0% {
+        background-position-x: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.notFound_paragraph {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    /*30px*/
+}
+
+/* .notFound_btn {
+    color: #F7F6FB;
+    background-color: #002782;
+    border: 2px solid #002782;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 12px 55px;
+    margin: 30px 0 10px 0;
+    border-radius: 10px;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in border 0.5s ease-in;
+}
+
+.notFound_btn:hover {
+    background-color: #00919C;
+    border: 2px solid #00919C;
+}
+
+.notFound_link {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #F7F6FB;
+} */
+
+
+.notFound_btn {
+    position: relative;
+    margin: 30px 0 10px 0;
+    padding: 12px 55px;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    /* border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px; */
+    outline: none;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.notFound_btn::after,
+.notFound_btn::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    /* border: 3px solid #fb1653; */
+    /* border-radius: 10px; */
+    transition: all 1s ease-in;
+}
+
+.notFound_btn::after {
+    top: 1px;
+    left: 1px;
+    border-top: 3px solid #047cfb;
+    border-left: 3px solid #685cfa;
+}
+
+.notFound_btn::before {
+    bottom: 1px;
+    right: 1px;
+    border-bottom: 3px solid #047cfb;
+    border-right: 3px solid #685cfa;
+}
+
+.notFound_btn:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.notFound_btn:hover::before,
+.notFound_btn:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.notFound_link {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--text-color);
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsividades. */
+@media (max-width: 1081px) {
+
+    .notFound_section {
+        border: 1px solid yellow;
+        height: 100vh;
+        /*70vh*/
+    }
+
+    .notFound_container {
+        width: 90%;
+        height: 50vh;
+    }
+
+    .notFound_caption {
+        font-size: 45px;
+    }
+
+    .notFound_paragraph {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+
+    .notFound_section {
+        border: 1px solid rgb(221, 129, 9);
+        height: 100vh;
+        /*70vh*/
+    }
+
+    .notFound_container {
+        width: 90%;
+        height: 45vh;
+    }
+
+    .notFound_title,
+    .notFound_caption {
+        font-size: 100px;
+    }
+
+    .notFound_caption {
+        font-size: 30px;
+    }
+
+    .notFound_paragraph {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .notFound_section {
+        border: 1px solid rgb(245, 105, 112);
+        width: 100%;
+        height: 90vh;
+    }
+
+    .notFound_container {
+        border: 1px solid red;
+        width: 95%;
+        height: 40vh;
+    }
+
+    .notFound_title,
+    .notFound_caption {
+        font-size: 100px;
+    }
+
+    .notFound_caption {
+        font-size: 30px;
+    }
+
+    .notFound_paragraph {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+
+    .notFound_section {
+        border: 1px solid rgb(189, 105, 245);
+        width: 100%;
+        height: 90vh;
+    }
+
+    .notFound_container {
+        border: 1px solid red;
+        width: 95%;
+        height: 60vh;
+    }
+
+    .notFound_title,
+    .notFound_caption {
+        font-size: 100px;
+    }
+
+    .notFound_caption {
+        font-size: 30px;
+    }
+
+    .notFound_paragraph {
+        font-size: 18px;
+    }
+
+    .notFound_btn {
+        font-size: 0.7em;
+        padding: 12px 45px;
+        margin: 30px 0 10px 0;
+    }
+}
+
+/* @media (max-width: 412px) { */
+@media (min-width: 412px) and (max-width: 430px) {
+
+    .notFound_section {
+        border: 1px solid rgb(21, 231, 238);
+        width: 100%;
+        height: 90vh;
+    }
+
+    .notFound_container {
+        border: 1px solid red;
+        width: 95%;
+        height: 65vh;
+    }
+
+    .notFound_title,
+    .notFound_caption {
+        font-size: 100px;
+    }
+
+    .notFound_caption {
+        font-size: 30px;
+    }
+
+    .notFound_paragraph {
+        font-size: 15px;
+    }
+
+    .notFound_btn {
+        font-size: 0.7em;
+        padding: 12px 45px;
+        margin: 30px 0 10px 0;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .notFound_section {
+        border: 1px solid rgb(21, 238, 21);
+        width: 100%;
+        height: 110vh;
+    }
+
+    .notFound_container {
+        border: 1px solid red;
+        width: 95%;
+        height: 80vh;
+        /*65vh*/
+    }
+
+    .notFound_title,
+    .notFound_caption {
+        font-size: 100px;
+    }
+
+    .notFound_caption {
+        font-size: 30px;
+    }
+
+    .notFound_paragraph {
+        font-size: 15px;
+    }
+
+    .notFound_btn {
+        font-size: 0.7em;
+        padding: 12px 45px;
+        margin: 20px 0 10px 0;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .notFound_section {
+        border: 1px solid rgb(90, 131, 245);
+        width: 100%;
+        height: 95vh;
+    }
+
+    .notFound_container {
+        border: 1px solid red;
+        width: 95%;
+        height: 70vh;
+    }
+
+    .notFound_title,
+    .notFound_caption {
+        font-size: 100px;
+    }
+
+    .notFound_caption {
+        font-size: 30px;
+    }
+
+    .notFound_paragraph {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .notFound_section {
+        border: 1px solid rgba(97, 216, 18, 0.863);
+        width: 100%;
+        height: 90vh;
+    }
+
+    .notFound_container {
+        border: 1px solid red;
+        width: 95%;
+        height: 70vh;
+    }
+
+    .notFound_title,
+    .notFound_caption {
+        font-size: 100px;
+    }
+
+    .notFound_caption {
+        font-size: 30px;
+    }
+
+    .notFound_paragraph {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 280px) {
+
+    .notFound_section {
+        border: 1px solid rgba(216, 18, 94, 0.863);
+        width: 100%;
+        height: 130vh;
+    }
+
+    .notFound_shape,
+    .notFound_shape1,
+    .notFound_shape2 {
+        border: 1px solid #ff00a6;
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+        background-color: #ff00a6;
+        top: 100px;
+        left: 1px;
+        /*30px*/
+        width: 250px;
+        /*150px*/
+        height: 250px;
+        /*150px*/
+        position: absolute;
+        z-index: -3;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .notFound_shape1 {
+        border: 1px solid #fbb657;
+        border-radius: 30% 70% 20% 40%;
+        background-color: #fbb657;
+
+        top: 310px;
+        left: 0;
+        right: -30px;
+    }
+
+    .notFound_shape2 {
+        border: 1px solid #71aafa;
+        border-radius: 60% 40% 60% 40%;
+        background-color: #71aafa;
+
+        top: 540px;
+        left: 1px;
+        /*30px*/
+        /* right: -30px; */
+    }
+
+    .notFound_container {
+        border: 1px solid red;
+        width: 95%;
+        height: 100vh;
+        /*90vh*/
+    }
+
+    .notFound_title,
+    .notFound_caption {
+        font-size: 100px;
+    }
+
+    .notFound_caption {
+        font-size: 30px;
+    }
+
+    .notFound_paragraph {
+        font-size: 18px;
+    }
+}
