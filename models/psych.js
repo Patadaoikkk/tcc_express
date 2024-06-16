@@ -22,7 +22,7 @@ class Psych {
     }
   }
 }
-
+console.log("funcionando");
 module.exports = Psych;
 
 

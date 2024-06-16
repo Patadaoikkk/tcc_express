@@ -19,6 +19,7 @@ class User {
     }
   }
 }
+console.log("funcionando");
 
 module.exports = User;
 
