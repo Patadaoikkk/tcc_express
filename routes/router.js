@@ -1,6 +1,9 @@
 
 const express = require('express');
 const router = express.Router();
+const User = require('../models/user');
+const psych = require('../models/psych');
+
 
 router.get('/', (req, res) => {
   res.render('Principal pagina '); //tentando fazer funcionar
