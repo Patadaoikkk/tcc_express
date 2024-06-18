@@ -4,11 +4,6 @@ const router = express.Router();
 const User = require('../models/user');
 const psych = require('../models/psych');
 
-
-router.get('/', (req, res) => {
-  res.render('Principal pagina '); //tentando fazer funcionar
-});
-
 router.get('/psych', (req, res) => {
   res.send('psych cadastro'); //tentando fazer funcionar
 });

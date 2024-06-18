@@ -22,7 +22,6 @@ pool.query('SELECT * FROM users', (err, result) => { //verificar usuarios no ban
   }
 });
 
-
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
