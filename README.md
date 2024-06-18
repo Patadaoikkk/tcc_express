@@ -6,5 +6,5 @@ npm init <br>
 npm install express <br>
 npm install ejs <br>
 npm install dotenv <br>
-npm install pg <br>
+npm install pg body-parser <br>
 node app.js
