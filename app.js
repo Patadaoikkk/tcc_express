@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 const path = require('path');
 const router = require ('./routes/router');
-const sequelize = require('./database/bd');
+const apagapo = require('./database/bd');
 const dotenv = require('dotenv');
 dotenv.config();
 const { Sequelize } = require('sequelize');
@@ -17,7 +17,7 @@ app.set('models', path.join(__dirname, 'models')); //diretorio para visualizaÃ§Ã
 
 app.use(router);
 
-sequelize.query('SELECT * FROM users', (err, result) => { //verificar usuarios no banco postgree
+apagapo.query('SELECT * FROM users', (err, result) => { //verificar usuarios no banco postgree
   if (err) {
     console.error(err);
   } else {

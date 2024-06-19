@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const user = require('../models/user');
 const psych = require('../models/psych');
-const {sequelize, create_acess_tokens_table, create_psiches__user, create_users_table} = require('../database/bd');
+const {apagapo, create_acess_tokens_table, create_psiches__user, create_users_table} = require('../database/bd');
 
 router.get(psych, (req, res) => {
   res.send('psych cadastro'); //tentando fazer funcionar
