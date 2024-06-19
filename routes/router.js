@@ -7,8 +7,12 @@ const psych = require('../models/psych');
 router.get('/psych', (req, res) => {
   res.send('psych cadastro'); //tentando fazer funcionar
 });
-router.get('/user', (req, res) => {
-  res.send('user cadastro'); //tentando fazer funcionar
+router.post('../models/user', async (req, res) => {
+  const { fullName, email, password, confirmPassword } = req.body;
+  const user = new User(fullName, email, password, confirmPassword);
+  await user.hashPassword();
+  await user.save();
+  res.send('Usuário criado com sucesso');
 });
 router.get('/teste', (req, res) => {
   res.send('Rota teste funcionando'); //rotas teste nem eiste este arquivo
