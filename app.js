@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const path = require('path');
-const router = require ("./routes/router");
-const pool = require('./database/bd')
+const router = require ('./routes/router');
+const sequelize = require('./database/bd')
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -16,7 +16,7 @@ app.set('models', path.join(__dirname, 'models')); //diretorio para visualizaÃ§Ã
 
 app.use(router);
 
-pool.query('SELECT * FROM users', (err, result) => { //verificar usuarios no banco postgree
+sequelize.query('SELECT * FROM users', (err, result) => { //verificar usuarios no banco postgree
   if (err) {
     console.error(err);
   } else {

@@ -1,11 +1,13 @@
-const { Pool } = require('pg');
 
-const pool = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_DATABASE,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
+const create_acess_tokens_table = require('./create_acess_tokens_table');
+const create_psiches__user = require('./create_psiches_user');
+const create_users_table = require('./create_users_table');
+const Sequelize = require('sequelize');
+
+
+const sequelize = new Sequelize('database', 'username', 'password', {
+  host: 'localhost',
+  dialect: 'ysql' // or 'postgres' or 'qlite'
 });
 
 // Função para testar a conexão com o banco de dados
@@ -25,5 +27,5 @@ process.on('exit', () => {
   pool.end();
 });
 
-// Exportar o pool
-module.exports = pool;
+// Exportar o sequelize
+module.exports = {sequelize, create_acess_tokens_table,create_psiches__user,create_users_table};

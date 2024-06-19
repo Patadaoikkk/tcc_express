@@ -1,7 +1,7 @@
 const uuidv4 = require('uuid').v4;
+const { DateTime } = require('luxon');
 const bcrypt = require('bcryptjs');
 const pool = require('../database/bd');
-const { DateTime } = require('luxon');
 
 class User {
   constructor() {
