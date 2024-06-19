@@ -1,14 +1,14 @@
 
 const express = require('express');
 const router = express.Router();
-const User = require('../models/user');
+const user = require('../models/user');
 const psych = require('../models/psych');
 const {sequelize, create_acess_tokens_table, create_psiches__user, create_users_table} = require('../database/bd');
 
-router.get('/psych', (req, res) => {
+router.get(psych, (req, res) => {
   res.send('psych cadastro'); //tentando fazer funcionar
 });
-router.post('../models/user', async (req, res) => {
+router.post(user, async (req, res) => {
   const { fullName, email, password, confirmPassword } = req.body;
   const user = new User(fullName, email, password, confirmPassword);
   await user.hashPassword();

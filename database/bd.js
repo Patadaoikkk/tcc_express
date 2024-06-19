@@ -7,13 +7,13 @@ const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize('database', 'username', 'password', {
   host: 'localhost',
-  dialect: 'ysql' // or 'postgres' or 'qlite'
+  dialect: 'postgres' // or 'postgres' or 'qlite'
 });
 
 // Função para testar a conexão com o banco de dados
 async function testConnection() {
   try {
-    await pool.query('SELECT 1');
+    await sequelize.query('SELECT 1');
     console.log('Conexão com o banco de dados estabelecida com sucesso!');
   } catch (err) {
     console.error('Erro ao conectar ao banco de dados:', err);
@@ -24,7 +24,7 @@ async function testConnection() {
 // Testar a conexão com o banco de dados
 testConnection();
 process.on('exit', () => {
-  pool.end();
+  sequelize.end();
 });
 
 // Exportar o sequelize

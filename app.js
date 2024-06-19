@@ -3,9 +3,10 @@ const app = express();
 const port = 3000;
 const path = require('path');
 const router = require ('./routes/router');
-const sequelize = require('./database/bd')
+const sequelize = require('./database/bd');
 const dotenv = require('dotenv');
 dotenv.config();
+const { Sequelize } = require('sequelize');
 
 console.log(process.env.DB_USER);
 
